@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>1970 Detektiv Sahnasi — Prompt To‘plami</title>
+<title>1970 Detektiv Sahnasi — Prompt To‘plami | ITC Academy</title>
 <style>
   :root{
     --bg:#0d1017; --panel:#161b26; --panel2:#1c2330; --ink:#e8ecf3; --muted:#9aa6b8;
@@ -61,14 +61,38 @@
     background:#67d191;color:#0d1017;font-weight:700;font-size:14px;padding:10px 18px;border-radius:24px;
     opacity:0;pointer-events:none;transition:.25s;z-index:50;}
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;
+    padding:7px 13px;border:1px solid var(--line);border-radius:20px;background:var(--panel);transition:.18s;}
+  .back-link:hover{color:var(--accent2);border-color:var(--accent);}
+  .back-link.top{margin-bottom:14px;}
+  .credits{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px;}
+  .credit{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);text-align:left;
+    background:var(--panel);border:1px solid var(--line);border-radius:40px;padding:6px 16px 6px 6px;transition:.18s;}
+  .credit:hover{border-color:var(--accent);transform:translateY(-1px);}
+  .credit .ci{width:34px;height:34px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;
+    color:#1a1205;background:linear-gradient(145deg,var(--accent2),var(--accent));}
+  .credit .ci.dev{color:#0d1017;background:linear-gradient(145deg,#9cc0f0,var(--blue));}
+  .credit .ct{display:flex;flex-direction:column;line-height:1.2;}
+  .credit small{font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;}
+  .credit b{font-size:13.5px;}
+  footer .credits{margin:0 0 14px;}
+  footer .back-link{margin-bottom:14px;}
+  footer p{margin:0;}
+  footer p a{color:var(--accent2);text-decoration:none;}
+  footer p a:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <a class="back-link top" href="../index.html">← Barcha darslar</a>
   <header class="hero">
     <div class="kicker">AI Kino · Seedance / Video Prompt</div>
     <h1>1970 Detektiv Sahnasi</h1>
     <p class="sub">Yomg‘irli tunda ofisda ochilayotgan fitna — 5 kadrli kinematografik ketma-ketlik uchun tayyor promptlar va yakuniy video natija.</p>
+    <div class="credits">
+      <a class="credit" href="https://itc-academy.uz" target="_blank" rel="noopener"><span class="ci">ITC</span><span class="ct"><small>Platforma</small><b>ITC Academy</b></span></a>
+      <a class="credit" href="https://husanbek-coder.uz" target="_blank" rel="noopener"><span class="ci dev">HS</span><span class="ct"><small>Dasturchi</small><b>Husan Suyunov</b></span></a>
+    </div>
   </header>
 
   <div class="steps-note">
@@ -199,7 +223,14 @@ No black-and-white output.</p><p>The final result must feel like a suspenseful 1
     <div class="vcap">Yuqoridagi promptlar asosida yaratilgan yakuniy sahna (15 soniya)</div>
   </div>
 
-  <footer>AI Kino Sahnasi — Prompt To‘plami · Telefon va kompyuterda ochiladi</footer>
+  <footer>
+    <div class="credits">
+      <a class="credit" href="https://itc-academy.uz" target="_blank" rel="noopener"><span class="ci">ITC</span><span class="ct"><small>Platforma</small><b>ITC Academy</b></span></a>
+      <a class="credit" href="https://husanbek-coder.uz" target="_blank" rel="noopener"><span class="ci dev">HS</span><span class="ct"><small>Dasturchi</small><b>Husan Suyunov</b></span></a>
+    </div>
+    <a class="back-link" href="../index.html">← Barcha darslar</a>
+    <p>AI Kino Sahnasi — Prompt To‘plami · <a href="https://itc-academy.uz" target="_blank" rel="noopener">ITC Academy</a> · Dasturchi: <a href="https://husanbek-coder.uz" target="_blank" rel="noopener">Husan Suyunov</a></p>
+  </footer>
 </div>
 
 <div class="toast" id="toast">Nusxalandi ✓</div>
