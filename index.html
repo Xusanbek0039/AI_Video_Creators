@@ -338,6 +338,7 @@ footer{border-top:1px solid var(--border);padding:44px 0 50px;background:linear-
     <div class="grid" id="grid"></div>
     <noscript>
       <div class="grid">
+        <a class="lesson" href="01_dars/qollanma.html"><div class="lbody"><div class="lmeta">DARS 01</div><h3>1970 Detektiv Sahnasi</h3><div class="lgo">Darsni ochish <span class="arr">→</span></div></div></a>
         <a class="lesson" href="07_dars/qollanma.html"><div class="lbody"><div class="lmeta">DARS 07</div><h3>AI Videoning Sifatini 2X Oshirish</h3><div class="lgo">Darsni ochish <span class="arr">→</span></div></div></a>
       </div>
     </noscript>
@@ -420,14 +421,22 @@ footer{border-top:1px solid var(--border);padding:44px 0 50px;background:linear-
    ===================================================================== */
 const LESSONS = [
   {
+    num: 1,
+    title: "1970 Detektiv Sahnasi",
+    desc: "Yomg'irli tunda ofisda ochilayotgan fitna: 5 kadrli kinematografik ketma-ketlik uchun tayyor promptlar, butun sahna uchun umumiy prompt va yakuniy video natija.",
+    tags: ["Seedance", "Kino prompt", "Referens rasm", "Lip sync"],
+    info: "5 kadr",
+    href: "01_dars/qollanma.html"
+  },
+  {
     num: 7,
     title: "AI Videoning Sifatini 2X Oshirish",
     desc: "G'oyadan yuqori sifatli videogacha: GPT Image'da rasm, Seedance 2.0 bilan animatsiya, 720p life hack orqali token tejash va Topaz AI bilan 2x upscale.",
     tags: ["GPT Image", "Seedance 2.0", "Topaz AI", "Syntx"],
-    steps: 4,
+    info: "4 qadam",
     href: "07_dars/qollanma.html"
   },
-  // { num: 8, title: "...", desc: "...", tags: ["Kling"], steps: 3, href: "08_dars/qollanma.html" },
+  // { num: 8, title: "...", desc: "...", tags: ["Kling"], info: "3 qadam", href: "08_dars/qollanma.html" },
 ];
 
 /* Kartalar uchun rang juftliklari (dars raqamiga qarab aylanadi) */
@@ -455,7 +464,7 @@ function card(l) {
   <a class="lesson" href="${esc(l.href)}" style="--c1:${c1};--c2:${c2}" aria-label="${pad(l.num)}-dars: ${esc(l.title)}">
     <div class="thumb">
       ${l.num === latest ? '<span class="badge">YANGI</span>' : ""}
-      ${l.steps ? `<span class="tdur">${l.steps} qadam</span>` : ""}
+      ${l.info ? `<span class="tdur">${esc(l.info)}</span>` : ""}
       <div class="num">${pad(l.num)}</div>
       <div class="tplay">${PLAY}</div>
     </div>
@@ -472,10 +481,10 @@ function card(l) {
 function soonCard() {
   return `
   <div class="lesson soon" aria-hidden="true">
-    <div class="thumb"><div class="num">${pad(latest + 1)}</div></div>
+    <div class="thumb"><div class="num">+</div></div>
     <div class="lbody">
-      <div class="lmeta">DARS ${pad(latest + 1)}</div>
-      <h3>Keyingi dars tez kunda</h3>
+      <div class="lmeta">TEZ KUNDA</div>
+      <h3>Yangi darslar tayyorlanmoqda</h3>
       <p>Yangi video darslik tayyorlanmoqda. Kuzatib boring!</p>
     </div>
   </div>`;
